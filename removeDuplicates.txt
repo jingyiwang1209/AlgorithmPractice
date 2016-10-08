@@ -1,0 +1,17 @@
+public static void removeDuplicates(int[]num)
+{
+    int count=0;
+    Set<Integer> sets=new HashSet<Integer>();
+    for (int i=0;i<num.length;i++)
+    {
+        sets.add(num[i]);
+    }
+    for(Integer set:sets)
+    {
+       System.out.print(set+", ");
+        num[count]=set;
+        count++; //The number of the set without duplicates.
+    }
+    System.out.println("Counts: "+count);
+
+}
