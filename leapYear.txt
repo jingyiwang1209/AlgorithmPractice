@@ -1,0 +1,25 @@
+   public void leapYear()
+    {
+        while(true)
+        {
+            System.out.println("Please input the year: ");
+            Scanner scanner=new Scanner(System.in);
+            String input=scanner.next();
+            if(input.equals("n"))
+            {
+                System.out.println("Ending program....");
+                break;
+            }
+
+            else {
+
+                int number = Integer.valueOf(input);
+                if (number % 400 == 0 || number % 4 == 0 && number % 100 != 0) {
+                    System.out.println("This is a leap year.");
+                } else {
+                    System.out.println("This is a common year.");
+                }
+            }
+
+        }
+    }
