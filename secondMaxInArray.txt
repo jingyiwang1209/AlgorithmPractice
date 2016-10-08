@@ -1,0 +1,20 @@
+public static int secondMax(int[]num)
+    {//To find the second max element in an Array:
+
+        int max=Math.max(num[0],num[1]);
+        int sMax=Math.min(num[0],num[1]);
+        for(int i=2;i<num.length;i++)
+        {
+            if(num[i]>max)
+            {
+                sMax=max;
+                max=num[i];
+            }
+            else if(num[i]>sMax)
+            {
+                sMax=num[i];
+            }
+        }
+        System.out.println(sMax);
+        return sMax;
+    }
