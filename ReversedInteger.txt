@@ -3,14 +3,10 @@
     {
 
 /*int num=1234;
-
 Loop0: 0+ 1234 % 10;
 Loop1: 4*10 + 123 % 10;
 Loop2: 43*10+ 12 % 10;
 Loop3: 432*10 + 1%10;
-
-
-
 reservedNum=4321;
 */
         int reservedNum=0;
