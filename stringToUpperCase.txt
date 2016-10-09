@@ -1,0 +1,16 @@
+    public static String stringToUpperCase(String str)
+    {
+        String newString=" ";
+        for(int i=0;i<str.length();i++)
+        {
+            char ch=str.charAt(i);
+            if(Character.isLowerCase(ch))
+            {
+               ch=(char)(ch -'a'+'A');
+            }
+            newString=newString+ch;
+
+        }
+        System.out.println(newString);
+        return newString;
+    }
