@@ -1,0 +1,56 @@
+ public Boolean isPalindrome(String str) {
+        /*Given a string, determine if it is a palindrome,
+        considering only alphanumeric characters and ignoring cases.
+
+        Option1:
+         corner case: the str contains non-letter and/or non-digital;
+        */
+
+        int i=0;
+        int j=str.length()-1;
+        char ch1=str.charAt(i);
+        char ch2=str.charAt(j);
+        while(i<j)
+        {
+            if(!Character.isLetterOrDigit(ch1))
+            {
+                i++;
+                continue;
+            }
+            if(!Character.isLetterOrDigit(ch2))
+            {
+                j--;
+                continue;
+            }
+            if(ch1!=ch2)
+            {
+                return false;
+            }
+
+            i++;
+            j--;
+        }
+
+        return true;
+    
+
+
+        //Option 2:
+        /*int len=str.length();
+        for(int i=0;i<str.length()/2;i++) {
+
+            char ch1 = str.charAt(i);
+            char ch2 = str.charAt(len - 1 - i);
+
+           if(!Character.isLetterOrDigit(ch1)// !!Character.isLetterOrDigit(ch2))
+               continue;
+
+            if (ch1 != ch2) {
+                return false;
+            }
+        }
+
+        return true;
+*/
+
+    }
