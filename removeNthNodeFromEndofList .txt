@@ -23,7 +23,6 @@ public class Solution {
         //double linked list
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        
         ListNode preDelete = dummy;
        
         //head jumps to the nth node from the beginning of the linked list.
