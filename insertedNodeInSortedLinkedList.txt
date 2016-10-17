@@ -9,7 +9,7 @@
  * }
  * }
  */
-public class Solution {
+public class ListNodeTest {
  /**
  * @param head: The head of linked list.
  * @param val: an integer
