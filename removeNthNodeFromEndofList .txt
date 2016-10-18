@@ -25,7 +25,7 @@ public class ListNodeTest {
         dummy.next = head;
         ListNode preDelete = dummy;
        
-        //head jumps to the nth node from the beginning of the linked list.
+        //head jumps to the (n-1)th node from the beginning of the linked list.
         for (int i = 0; i < n; i++) {
             if (head == null) {
                 return null;
