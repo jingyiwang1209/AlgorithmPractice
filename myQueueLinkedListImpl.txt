@@ -1,0 +1,60 @@
+package com.LinkedListStackQueueandPrevious;
+
+import java.util.NoSuchElementException;
+
+/**
+ * Created by Jing on 10/18/2016.
+ */
+public class MyQueueLinkedListImpl {
+    private ListNode head;
+    private ListNode tail;
+    public void enqueue(int val)
+    {
+        ListNode newNode=new ListNode(val);
+        if(isEmpty())
+        {
+            tail=head=newNode;
+        }else
+        {
+            tail.next=newNode;
+            tail=tail.next;
+        }
+
+    }
+
+    public int dequeue()
+    {
+      if(isEmpty())
+      {
+          throw new NoSuchElementException();
+      }
+
+          int dequeueVal=head.val;
+          head=head.next;
+
+          if(head==null)
+          {
+              tail=null;
+          }
+          return dequeueVal;
+
+    }
+
+    public int peakHead()
+    {
+       if(isEmpty())
+       {
+           throw new NoSuchElementException();
+       }
+       return head.val;
+    }
+
+    public boolean isEmpty()
+    {
+      return head==null&&tail==null;
+    }
+    public void empty()
+    {
+       head=tail=null;
+    }
+}
